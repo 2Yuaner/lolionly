@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "projects": "作品"
+  },
+  "home": {
+    "greeting": "你好，我是 Nagisa",
+    "subtitle": "全栈开发者 / 热爱创造",
+    "cta": "了解更多"
+  },
+  "about": {
+    "title": "关于我",
+    "intro": "一个热爱技术和设计的开发者，专注于构建优雅的 Web 体验。"
+  },
+  "projects": {
+    "title": "我的作品",
+    "empty": "暂无作品，敬请期待..."
+  },
+  "statusBar": {
+    "browsing": "正在浏览",
+    "languageLabel": "直播分区",
+    "languages": {
+      "zh-CN": "中文",
+      "en-US": "英语"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Nagisa. All rights reserved."
+  }
+}

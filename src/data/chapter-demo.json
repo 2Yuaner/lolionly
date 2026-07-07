@@ -1,0 +1,323 @@
+{
+  "id": "chapter_01",
+  "title": "序章 - 樱花树下的相遇",
+  "startNode": "node_001",
+  "characters": [
+    {
+      "id": "hiyori",
+      "name": "日和",
+      "nameColor": "#f9a8d4",
+      "modelType": "static",
+      "staticImagePath": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRXa045MWxsM2RHTXchIQUAcXVuZ3o!.png",
+      "expressions": {
+        "neutral": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRXa045MWxsM2RHTXchIQUAcXVuZ3o!.png",
+        "happy": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRXVk45MWxGU2QyTEEhIQUAcXVuZ3o!.png",
+        "surprised": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRXRE45MWxwMmouTGchIQUAcXVuZ3o!.png",
+        "shy": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRYWU45MWxMeWNRTEEhIQUAcXVuZ3o!.png",
+        "angry": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRYeE45MWwuQ1RPS0EhIQUAcXVuZ3o!.png"
+      },
+      "defaultPosition": "right"
+    },
+    {
+      "id": "sakura",
+      "name": "小樱",
+      "nameColor": "#f472b6",
+      "modelType": "static",
+      "staticImagePath": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVKk9kMWxaSVFvQkEhIQUAcXVuZ3o!.png",
+      "expressions": {
+        "neutral": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVKk9kMWxaSVFvQkEhIQUAcXVuZ3o!.png",
+        "smile": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVLk9kMWxWa2xKQkEhIQUAcXVuZ3o!.png",
+        "blush": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVM09kMWxLemhJQlEhIQUAcXVuZ3o!.png",
+        "surprised": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVME9kMWx2SmFxQlEhIQUAcXVuZ3o!.png",
+        "happy": "@/assets/galgalme/character/CG/NR8AVjViQ1FBM05URXdNVGt5TkRVMU9kMWxEN09IQlEhIQUAcXVuZ3o!.png"
+      },
+      "defaultPosition": "left"
+    }
+  ],
+  "nodes": {
+    "node_001": {
+      "id": "node_001",
+      "speaker": {
+        "name": "旁白",
+        "color": "#aaaaaa"
+      },
+      "text": "四月。樱花盛开的季节。",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [],
+      "transition": "fade",
+      "edges": [
+        {
+          "id": "e_001_002",
+          "type": "auto",
+          "target": "node_002"
+        }
+      ]
+    },
+    "node_002": {
+      "id": "node_002",
+      "speaker": {
+        "name": "旁白",
+        "color": "#aaaaaa"
+      },
+      "text": "我站在校门口，花瓣如雨般飘落。今天就是我高中生活的第一天。",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [],
+      "edges": [
+        {
+          "id": "e_002_003",
+          "type": "auto",
+          "target": "node_003"
+        }
+      ]
+    },
+    "node_003": {
+      "id": "node_003",
+      "speaker": {
+        "name": "???",
+        "color": "#f9a8d4"
+      },
+      "text": "那个……同学，你是新生吗？",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [
+        {
+          "characterId": "hiyori",
+          "position": "right",
+          "expression": "neutral",
+          "visible": true
+        }
+      ],
+      "transition": "fade",
+      "sfx": {
+        "src": "./audio/footstep.mp3",
+        "volume": 0.6
+      },
+      "edges": [
+        {
+          "id": "e_003_004",
+          "type": "auto",
+          "target": "node_004"
+        }
+      ]
+    },
+    "node_004": {
+      "id": "node_004",
+      "speaker": {
+        "name": "日和",
+        "color": "#f9a8d4",
+        "characterId": "hiyori"
+      },
+      "text": "我叫日和！也是今天刚入学的一年级生。那个……如果你不介意的话，要不要一起去找教室？",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [
+        {
+          "characterId": "hiyori",
+          "position": "right",
+          "expression": "shy",
+          "visible": true
+        }
+      ],
+      "edges": [
+        {
+          "id": "e_004_005",
+          "type": "choice",
+          "label": "好啊，一起走吧",
+          "target": "node_005"
+        },
+        {
+          "id": "e_004_006",
+          "type": "choice",
+          "label": "……不用了，我自己找",
+          "target": "node_006"
+        }
+      ]
+    },
+    "node_005": {
+      "id": "node_005",
+      "speaker": {
+        "name": "日和",
+        "color": "#f9a8d4",
+        "characterId": "hiyori"
+      },
+      "text": "太好了！那我们走吧！",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [
+        {
+          "characterId": "hiyori",
+          "position": "right",
+          "expression": "happy",
+          "visible": true
+        }
+      ],
+      "onEnter": [
+        { "key": "hiyori_affection", "value": 1 },
+        { "key": "met_hiyori", "value": true }
+      ],
+      "edges": [
+        { "id": "e_005_007", "type": "auto", "target": "node_007" }
+      ]
+    },
+    "node_006": {
+      "id": "node_006",
+      "speaker": {
+        "name": "日和",
+        "color": "#f9a8d4",
+        "characterId": "hiyori"
+      },
+      "text": "啊……这样啊……那、那好吧……",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [
+        {
+          "characterId": "hiyori",
+          "position": "right",
+          "expression": "shy",
+          "visible": true
+        }
+      ],
+      "onEnter": [
+        { "key": "met_hiyori", "value": true }
+      ],
+      "edges": [
+        { "id": "e_006_007", "type": "auto", "target": "node_007" }
+      ]
+    },
+    "node_007": {
+      "id": "node_007",
+      "speaker": {
+        "name": "旁白",
+        "color": "#aaaaaa"
+      },
+      "text": "走进教室，我看到一个女孩子正独自坐在窗边，望着窗外的樱花发呆。",
+      "background": "@/assets/galgalme/background/272a3819eccb400f6e7dd6a74f03c0d3e389f7b6.jpg",
+      "characters": [
+        {
+          "characterId": "sakura",
+          "position": "left",
+          "expression": "neutral",
+          "visible": true
+        }
+      ],
+      "transition": "slide",
+      "edges": [
+        { "id": "e_007_008", "type": "auto", "target": "node_008" }
+      ]
+    },
+    "node_008": {
+      "id": "node_008",
+      "speaker": {
+        "name": "小樱",
+        "color": "#f472b6",
+        "characterId": "sakura"
+      },
+      "text": "（察觉到视线，转过头来）……啊，你好。你也是这个班的吗？",
+      "background": "@/assets/galgalme/background/272a3819eccb400f6e7dd6a74f03c0d3e389f7b6.jpg",
+      "characters": [
+        {
+          "characterId": "sakura",
+          "position": "left",
+          "expression": "surprised",
+          "visible": true
+        }
+      ],
+      "edges": [
+        { "id": "e_008_009", "type": "auto", "target": "node_009" }
+      ]
+    },
+    "node_009": {
+      "id": "node_009",
+      "speaker": {
+        "name": "旁白",
+        "color": "#aaaaaa"
+      },
+      "text": "我注意到她的桌上放着一本厚厚的植物图鉴。",
+      "background": "@/assets/galgalme/background/272a3819eccb400f6e7dd6a74f03c0d3e389f7b6.jpg",
+      "characters": [
+        {
+          "characterId": "sakura",
+          "position": "left",
+          "expression": "smile",
+          "visible": true
+        }
+      ],
+      "edges": [
+        {
+          "id": "e_009_010",
+          "type": "choice",
+          "label": "「你喜欢植物吗？」",
+          "conditions": [],
+          "target": "node_010"
+        },
+        {
+          "id": "e_009_011",
+          "type": "choice",
+          "label": "「你就是传说中的图书委员？」",
+          "target": "node_011",
+          "conditions": [
+            { "type": "flag", "key": "met_hiyori", "operator": "eq", "value": true }
+          ]
+        }
+      ]
+    },
+    "node_010": {
+      "id": "node_010",
+      "speaker": {
+        "name": "小樱",
+        "color": "#f472b6",
+        "characterId": "sakura"
+      },
+      "text": "嗯！我最喜欢樱花了。你知道吗？樱花的花语是「精神之美」和「纯洁」。",
+      "background": "@/assets/galgalme/background/272a3819eccb400f6e7dd6a74f03c0d3e389f7b6.jpg",
+      "characters": [
+        {
+          "characterId": "sakura",
+          "position": "left",
+          "expression": "happy",
+          "visible": true
+        }
+      ],
+      "onEnter": [
+        { "key": "sakura_affection", "value": 2 },
+        { "key": "met_sakura", "value": true }
+      ],
+      "edges": [
+        { "id": "e_010_end", "type": "auto", "target": "node_end" }
+      ]
+    },
+    "node_011": {
+      "id": "node_011",
+      "speaker": {
+        "name": "小樱",
+        "color": "#f472b6",
+        "characterId": "sakura"
+      },
+      "text": "诶？你怎么知道的？……是日和告诉你的吧？那孩子总是到处宣传……",
+      "background": "@/assets/galgalme/background/272a3819eccb400f6e7dd6a74f03c0d3e389f7b6.jpg",
+      "characters": [
+        {
+          "characterId": "sakura",
+          "position": "left",
+          "expression": "blush",
+          "visible": true
+        }
+      ],
+      "onEnter": [
+        { "key": "sakura_affection", "value": 1 },
+        { "key": "met_sakura", "value": true }
+      ],
+      "edges": [
+        { "id": "e_011_end", "type": "auto", "target": "node_end" }
+      ]
+    },
+    "node_end": {
+      "id": "node_end",
+      "speaker": {
+        "name": "旁白",
+        "color": "#aaaaaa"
+      },
+      "text": "就这样，我的高中生活——在樱花纷飞的季节里，悄然开始了。",
+      "background": "@/assets/galgalme/background/1.jpg",
+      "characters": [],
+      "transition": "fade",
+      "edges": []
+    }
+  }
+}

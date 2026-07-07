@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "home": {
+    "greeting": "Hi, I'm Nagisa",
+    "subtitle": "Full-Stack Developer / Creator",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "A developer passionate about technology and design, focused on crafting elegant web experiences."
+  },
+  "projects": {
+    "title": "My Projects",
+    "empty": "No projects yet, stay tuned..."
+  },
+  "statusBar": {
+    "browsing": "Browsing",
+    "languageLabel": "Stream Zone",
+    "languages": {
+      "zh-CN": "Chinese",
+      "en-US": "English"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Nagisa. All rights reserved."
+  }
+}
